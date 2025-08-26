@@ -1,0 +1,51 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto); 
+  gap: 16px; 
+  justify-content: center;
+}
+
+.grid img {
+  width: 200px;
+  height: 200px;         
+  object-fit: cover;     
+  display: block;  
+  border: 5px #d3d3d3 solid;
+  border-radius: 100%;
+}
+
+/* перший стовпчик завжди червоний */
+.grid img:nth-child(4n + 1){
+    border: 5px red solid;
+}
+
+/* при hover всі стають жовтими */
+.grid img:hover {
+    border: 5px #eeff00 solid;
+    transform: rotate(45deg);
+} 
+
+/* адаптив під 900px */
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, auto); 
+  }
+  .grid img:nth-child(2n + 1){
+    border: 5px red solid;
+  }
+}
+
+/* адаптив під 500px */
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(1, auto); 
+  }
+  .grid img {
+    border: 5px red solid;
+  }
+}
