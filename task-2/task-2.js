@@ -1,6 +1,6 @@
 /* 7 завдання */
 
-let imgs = document.querySelectorAll("img");
+let imgs = document.querySelectorAll(".grid img");
 
 
 let info = document.getElementById("info");
