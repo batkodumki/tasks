@@ -2,27 +2,58 @@ h1 {
     text-align: center;
 }
 
+.flags{
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+
 .ua {
     width: 300px;
     height: 200px;
     border: 1px solid #000000;
-    margin: 20px auto;
     background: linear-gradient(to top, #ffff00 0%,#ffff00 50%, #001eff 50%, #001eff 100%);
+    transition: transform 1s ease;
+    position: absolute;
+    z-index: 2;
 }
+
+.text{
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .6s ease .3s;
+}
+
+.flags:hover .ua, .flags:hover .cz, .flags:hover .jp, .flags:hover .ic{
+    transform: translateX(-300px);
+}
+
+.flags:hover .text{
+    opacity: 1;
+}   
 
 .jp{
     width: 300px;
     height: 200px;
     border: 1px solid #000000;
-    margin: 20px auto;
     background: radial-gradient(circle, #ff0000 0%, #ff0000 35%, #ffffff 35%, #ffffff 100%);
+    transition: transform 1s ease;
+    z-index: 2;
+    position: absolute;
+}
+
+.jp:hover{
+    transform: translateX(-300px)
 }
 
 .ic{
     width: 300px;
     height: 200px;
     border: 1px solid #000000;
-    margin: 20px auto;
     background:
     linear-gradient(to right, 
     transparent 0%, transparent 25%,
@@ -42,17 +73,26 @@ h1 {
     #ff0000 25%, #ff0000 35%,
     #ffffff 35%, #ffffff 40%,
     #001eff 40%, #001eff 100%);
+
+    transition: transform 1s ease;
+    z-index: 2;
+    position: absolute;
+}
+
+.ic:hover{
+    transform: translateX(-300px)
 }
 
 .cz{
     width: 300px;
     height: 200px;
-    margin: 20px auto;
     border: 1px solid #000000;
     background: linear-gradient(to bottom, 
     #ffffff 0%, #ffffff 50%, 
     #ff0000 50%, #ff0000 100%);
-    position: relative;
+    position: absolute;
+    transition: transform 1s ease;
+    z-index: 2;
   
 }
 .cz::before {
@@ -66,4 +106,62 @@ h1 {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
+.cz:hover{
+    transform: translateX(-300px)
+}
 
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 20px;
+  position: relative;
+  background: #11457E;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+header .back-btn, footer .btn {
+  position: absolute;
+  left: 20px; 
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+header .back-btn:hover, footer .btn:hover {
+  text-decoration: underline;
+}
+
+body{
+    background: #8fbdfd;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 20px;
+  position: relative;
+  background: #11457E;
+}
+
+
+@media screen and (max-width: 600px) {
+    .flags, .ua, .cz, .jp, .ic{
+         transition: 1s ease;
+    }
+
+    .flags:hover .ua, .flags:hover .cz, .flags:hover .jp, .flags:hover .ic{
+        opacity: 0;
+        transform: none;
+        transition: 1s ease;
+    }
+    
+    
+}
