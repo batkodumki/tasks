@@ -17,7 +17,9 @@
   display: block;  
   border: 5px #d3d3d3 solid;
   border-radius: 100%;
+  transition: transform 0.3s, border 0.3s;
 }
+
 
 
 .grid img:nth-child(4n + 1){
@@ -79,3 +81,44 @@
   color: white;
   cursor: pointer;
 }
+
+/* Модальге вікно, 7 завдання */
+body {
+  margin: 0;
+  background: #8fbdfd;
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 20px;
+  background: #11457E;
+}
+
+header h1 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+header .back-btn {
+  position: absolute;
+  left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+header .back-btn:hover { 
+  text-decoration: underline; 
+}
+
+
+#info { 
+  margin-top: 10px; 
+}
+

@@ -26,3 +26,27 @@ h1 {
 .links a:hover {
   background: #0d3963;
 }
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 20px;
+  background: #11457E;
+}
+
+header h1 {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+
+footer{
+  display: flex;
+  padding: 10px 20px;
+  position: relative;
+  background: #11457E;
+}
