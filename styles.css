@@ -1,7 +1,28 @@
+body {
+  margin: 0;
+  background: #8fbdfd; 
+  font-family: Arial, sans-serif;
+}
+
 h1 {
-    text-align: center;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .links {
-   text-align: center;
+  text-align: center;
+}
+
+.links a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 14px;
+  background: #11457E; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.links a:hover {
+  background: #0d3963;
 }
