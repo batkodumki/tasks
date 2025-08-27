@@ -13,7 +13,7 @@ document.querySelector("#send").onclick = function() {
         table += "<td>"+data[i].country+"</td>";
         table += "<td>"+data[i].alpha_two_code+"</td>";
         table += "<td>"+data[i].domains.join(", ")+"</td>";
-        table += "<td><a href='"+data[i].web_pages[0]+"' target='_blank'>Сайт</a></td>";
+        table += "<td><a href='"+data[i].web_pages[0]+"' target='_blank'>Site</a></td>";
         table += "</tr>";
       }
       table += "</table>";

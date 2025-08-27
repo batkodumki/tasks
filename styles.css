@@ -43,10 +43,3 @@ header h1 {
   text-align: center;
 }
 
-
-footer{
-  display: flex;
-  padding: 10px 20px;
-  position: relative;
-  background: #11457E;
-}
