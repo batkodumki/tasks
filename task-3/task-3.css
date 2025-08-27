@@ -1,0 +1,30 @@
+h1 {
+  text-align: center; 
+}
+
+.form {
+  text-align: center; 
+  margin: 10px auto; 
+}
+
+.form input {
+  padding: 6px 10px; 
+  width: 200px;
+}
+
+.form button {
+  padding: 6px 10px; 
+  margin-left: 6px; 
+
+}
+
+
+
+table {
+  border-collapse: collapse; 
+  width: 90%; 
+  margin: 10px auto; 
+}
+
+
+
