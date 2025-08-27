@@ -1,7 +1,6 @@
 document.querySelector("#send").onclick = function() {
   let country = document.querySelector("#country").value;
-  const url = 'https://universities.hipolabs.com/search?country=' + encodeURIComponent(country.trim());
-
+  let url = "http://universities.hipolabs.com/search?country=" + country;
 
   fetch(url)
     .then(r => r.json())
